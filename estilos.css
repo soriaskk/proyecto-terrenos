@@ -34,3 +34,42 @@ nav a {
     text-decoration: none;
     margin-right: 15px;
 }
+/* ===== ENCABEZADO ===== */
+
+.hero{
+    background: linear-gradient(rgba(0,53,128,0.7), rgba(0,53,128,0.7)),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef");
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero p{
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.boton{
+    background-color: #febb02;
+    color: black;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.boton:hover{
+    background-color: #ffd54f;
+}

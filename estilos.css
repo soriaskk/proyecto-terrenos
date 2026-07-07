@@ -73,3 +73,32 @@ nav a {
 .boton:hover{
     background-color: #ffd54f;
 }
+/* ===== MENÚ ===== */
+
+.menu{
+    background:#003580;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.links a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.links a:hover{
+    color:#febb02;
+}

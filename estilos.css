@@ -102,3 +102,47 @@ nav a {
 .links a:hover{
     color:#febb02;
 }
+/* ===== TARJETAS ===== */
+
+.titulo{
+    text-align:center;
+    margin:40px;
+    font-size:40px;
+}
+
+.contenedor{
+    width:90%;
+    margin:auto;
+}
+
+.tarjeta{
+    display:flex;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+    margin-bottom:40px;
+    transition:.3s;
+}
+
+.tarjeta:hover{
+    transform:scale(1.02);
+}
+
+.tarjeta img{
+    width:380px;
+    object-fit:cover;
+}
+
+.info{
+    padding:25px;
+}
+
+.info h2{
+    color:#003580;
+}
+
+.info h3{
+    color:#2e7d32;
+    font-size:30px;
+}

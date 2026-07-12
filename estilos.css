@@ -200,4 +200,40 @@ footer {
         grid-template-columns: 1fr; /* 1 columna en celulares */
     }
 }
+/* --- ESTILO DEL MAPA --- */
+
+.mapa-contenedor {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+.mapa-contenedor h2 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.mapa-marco {
+    max-width: 900px; /* Ancho máximo del mapa */
+    margin: 0 auto;
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Para que el mapa respete los bordes redondeados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Una sombra elegante */
+    border: 5px solid white; /* Un marco blanco finito */
+}
+
+/* Esto hace que el mapa ocupe todo el ancho del marco y sea responsive */
+.mapa-marco iframe {
+    width: 100% !important;
+    height: 400px; /* Altura del mapa */
+    border: none;
+    display: block;
+}
+
+/* Ajuste para pantallas muy chicas */
+@media (max-width: 600px) {
+    .mapa-marco iframe {
+        height: 300px;
+    }
+}
 

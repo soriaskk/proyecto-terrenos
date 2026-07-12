@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+
     <header>
         <nav>
             <a href="index.html" class="logo">Terrenos <span>Chos Malal</span></a>
             <ul>
-                <li><a href="login.html">Login</a></li>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="terrenos.html">Terrenos</a></li>
                 <li><a href="contactos.html">Contacto</a></li>
@@ -22,26 +22,50 @@
 
     <main class="login-container">
         <div class="login-box">
-            <h2>Iniciar Sesión</h2>
-            <p>Accedé a tu panel de vendedor</p>
-            <form>
+            <h2>Panel de Vendedor</h2>
+            <p>Ingresá tus credenciales para gestionar lotes</p>
+            
+            <!-- El ID "formularioLogin" es el que usa el script de abajo -->
+            <form id="formularioLogin">
                 <div class="input-group">
                     <label>Correo Electrónico</label>
-                    <input type="email" placeholder="usuario@email.com" required>
+                    <input type="email" id="email" placeholder="admin@ypf.com" required>
                 </div>
                 <div class="input-group">
                     <label>Contraseña</label>
-                    <input type="password" placeholder="••••••••" required>
+                    <input type="password" id="password" placeholder="••••••••" required>
                 </div>
-                <button type="submit" class="boton-login">Ingresar</button>
-                <a href="#" class="olvido">¿Olvidaste tu contraseña?</a>
+                <button type="submit" class="boton-login">Ingresar al Sistema</button>
             </form>
+            
+            <a href="#" class="olvido">¿Te olvidaste la contraseña?</a>
         </div>
     </main>
 
     <footer>
         <p>&copy; 2026 Terrenos Chos Malal - Proyecto Escolar YPF</p>
     </footer>
+
+    <!-- AQUÍ ESTÁ EL CEREBRO DEL LOGIN -->
+    <script>
+        const loginForm = document.getElementById('formularioLogin');
+
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página se recargue sola
+
+            // Capturamos lo que escribió el usuario
+            const correo = document.getElementById('email').value;
+            const clave = document.getElementById('password').value;
+
+            // COMPROBACIÓN
+            if (correo === "admin@ypf.com" && clave === "1234") {
+                alert("¡Ingreso exitoso! Bienvenido Lautaro.");
+                window.location.href = "admin.html"; // Nos manda a la página de admin
+            } else {
+                alert("Datos incorrectos. Probá con admin@ypf.com y clave 1234");
+            }
+        });
+    </script>
+
 </body>
 </html>
-

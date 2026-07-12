@@ -1,4 +1,19 @@
-/* 1. RESET BÁSICO (Consigna escolar) */
+/* 1. IMPORTACIÓN DE FUENTES GOOGLE (Montserrat y Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+/* 2. VARIABLES PRO (Para cambiar colores fácilmente) */
+:root {
+    --azul-pro: #002d5a;      /* Azul elegante YPF */
+    --azul-claro: #0056b3;
+    --amarillo-pro: #ffcc00;  /* Amarillo YPF */
+    --gris-fondo: #f8f9fa;
+    --texto: #2d3436;
+    --blanco: #ffffff;
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --fuente-cuerpo: 'Poppins', sans-serif;
+}
+
+/* 3. RESET BÁSICO (Consigna Escolar) */
 * {
     margin: 0;
     padding: 0;
@@ -6,35 +21,46 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--fuente-cuerpo);
+    background-color: var(--gris-fondo);
+    color: var(--texto);
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-/* 2. NAVEGACIÓN (Estilo azul YPF) */
+/* 4. TÍTULOS */
+h1, h2, h3, .logo {
+    font-family: var(--fuente-titulos);
+    color: var(--azul-pro);
+    margin-bottom: 1rem;
+}
+
+/* 5. NAVEGACIÓN PROFESIONAL */
 header {
-    background-color: #003366; /* Azul profundo */
-    color: white;
-    padding: 20px 0;
+    background-color: var(--blanco);
+    padding: 15px 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .logo span {
-    color: #ffcc00; /* Amarillo YPF */
+    color: var(--amarillo-pro);
 }
 
 nav ul {
@@ -43,23 +69,23 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    color: var(--azul-pro);
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    color: var(--azul-claro);
 }
 
-/* 3. SECCIÓN HERO (La imagen principal) */
+/* 6. SECCIÓN HERO (Banner de Inicio) */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Foto de campo genérica, podés cambiarla por una de Chos Malal */
+    background: linear-gradient(rgba(0,45,90,0.6), rgba(0,45,90,0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -67,91 +93,68 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.boton {
-    background-color: #ffcc00;
-    color: #003366;
-    padding: 10px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.presentacion {
-    padding: 50px 20px;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* 4. RESPONSIVE (Media Queries - Consigna escolar) */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav ul {
-        margin-top: 15px;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-}
-
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-/* --- DISEÑO DE LA PÁGINA DE TERRENOS --- */
-
-.container-terrenos {
-    max-width: 1200px;
-    margin: 40px auto;
+    color: var(--blanco);
     padding: 0 20px;
 }
 
-.titulo-pagina {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #003366;
+.hero h1 {
+    color: var(--blanco);
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }
 
-/* El Grid hace que los terrenos se pongan en columnas */
+/* 7. BOTONES PRO */
+.boton, .btn-contacto, button {
+    background: linear-gradient(135deg, var(--azul-pro) 0%, var(--azul-claro) 100%);
+    color: var(--blanco);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 45, 90, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover, .btn-contacto:hover, button:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 45, 90, 0.4);
+}
+
+/* 8. GRID DE TERRENOS (Tarjetas) */
 .grid-terrenos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-    gap: 30px; /* Espacio entre las tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-/* Estilo de cada tarjeta */
 .tarjeta {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    background: var(--blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.4s ease;
 }
 
 .tarjeta:hover {
-    transform: translateY(-10px); /* Efecto de que "flota" cuando pasas el mouse */
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .tarjeta img {
     width: 100%;
-    height: 200px;
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    height: 220px;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+
+.tarjeta:hover img {
+    transform: scale(1.1);
 }
 
 .tarjeta-info {
@@ -159,81 +162,61 @@ footer {
     text-align: center;
 }
 
-.tarjeta-info h3 {
-    margin-bottom: 10px;
-    color: #003366;
-}
-
-.tarjeta-info p {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 15px;
-}
-
 .precio {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    color: #8b5a2b; /* Color tierra/bronce */
-    margin-bottom: 15px;
+    color: var(--azul-claro);
+    margin: 10px 0;
 }
 
-.btn-contacto {
-    display: inline-block;
-    background-color: #003366;
-    color: white;
-    padding: 8px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
+/* 9. FORMULARIO Y MAPA (Contacto) */
+.contacto-container, form {
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
 }
 
-/* RESPONSIVE PARA TERRENOS: Si la pantalla es chica, se pone en 1 sola columna */
-@media (max-width: 900px) {
-    .grid-terrenos {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-    }
-}
-
-@media (max-width: 600px) {
-    .grid-terrenos {
-        grid-template-columns: 1fr; /* 1 columna en celulares */
-    }
-}
-/* --- ESTILO DEL MAPA --- */
-
-.mapa-contenedor {
-    margin-top: 40px;
-    text-align: center;
-    padding: 20px;
-}
-
-.mapa-contenedor h2 {
-    color: #003366;
+input, textarea {
+    padding: 12px;
     margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: var(--fuente-cuerpo);
 }
 
 .mapa-marco {
-    max-width: 900px; /* Ancho máximo del mapa */
-    margin: 0 auto;
-    border-radius: 15px; /* Bordes redondeados */
-    overflow: hidden; /* Para que el mapa respete los bordes redondeados */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Una sombra elegante */
-    border: 5px solid white; /* Un marco blanco finito */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 30px;
 }
 
-/* Esto hace que el mapa ocupe todo el ancho del marco y sea responsive */
-.mapa-marco iframe {
-    width: 100% !important;
-    height: 400px; /* Altura del mapa */
-    border: none;
-    display: block;
+/* 10. FOOTER */
+footer {
+    background-color: var(--azul-pro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
 }
 
-/* Ajuste para pantallas muy chicas */
-@media (max-width: 600px) {
-    .mapa-marco iframe {
-        height: 300px;
+/* 11. RESPONSIVE (Media Queries) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        margin-top: 20px;
+        padding: 0;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    .hero h1 {
+        font-size: 2rem;
     }
 }
 

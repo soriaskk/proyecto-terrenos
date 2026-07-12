@@ -218,5 +218,80 @@ footer {
     .hero h1 {
         font-size: 2rem;
     }
+    /* --- ESTILOS DE LOGIN --- */
+
+.login-container {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+    color: var(--azul-pro);
+}
+
+.login-box p {
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--azul-pro);
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    margin-bottom: 0; /* Para que no use el margen de los otros inputs */
+}
+
+.boton-login {
+    width: 100%;
+    background: linear-gradient(135deg, var(--azul-pro) 0%, var(--azul-claro) 100%);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.boton-login:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+.olvido {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--azul-claro);
+    text-decoration: none;
+}
+
 }
 

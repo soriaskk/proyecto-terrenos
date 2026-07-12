@@ -2,59 +2,66 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Terrenos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrenos Disponibles | Chos Malal</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Inicio</a>
-    <a href="terrenos.html">Terrenos</a>
-    <a href="contactos.html">Contacto</a>
-</nav>
+    <header>
+        <nav>
+            <div class="logo">Terrenos <span>Chos Malal</span></div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="terrenos.html">Terrenos</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<h1 class="titulo">Terrenos Disponibles</h1>
+    <main class="container-terrenos">
+        <h1 class="titulo-pagina">Terrenos Disponibles</h1>
+        
+        <div class="grid-terrenos">
+            <!-- Terreno 1 -->
+            <article class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=400&q=80" alt="Terreno en Barrio Norte">
+                <div class="tarjeta-info">
+                    <h3>Lote Barrio Norte</h3>
+                    <p>Hermosa vista a la montaña, con servicios de luz y agua.</p>
+                    <span class="precio">$15.000.000</span>
+                    <a href="contactos.html" class="btn-contacto">Consultar</a>
+                </div>
+            </article>
 
-<div class="contenedor">
+            <!-- Terreno 2 -->
+            <article class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=400&q=80" alt="Terreno Cordillera">
+                <div class="tarjeta-info">
+                    <h3>Lote Cordillera</h3>
+                    <p>Terreno amplio ideal para cabañas o emprendimiento turístico.</p>
+                    <span class="precio">$22.500.000</span>
+                    <a href="contactos.html" class="btn-contacto">Consultar</a>
+                </div>
+            </article>
 
-    <div class="tarjeta">
-
-        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef" alt="Terreno">
-
-        <div class="info">
-
-            <h2>Terreno Centro</h2>
-
-            <p>📍 Centro de Chos Malal</p>
-
-            <p>📐 500 m²</p>
-
-            <h3>$25.000.000</h3>
-
-            <a href="#" class="boton">Ver más</a>
-
+            <!-- Terreno 3 -->
+            <article class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=400&q=80" alt="Terreno El Torreon">
+                <div class="tarjeta-info">
+                    <h3>Lote El Torreón</h3>
+                    <p>Ubicación céntrica con acceso a gas natural y cloacas.</p>
+                    <span class="precio">$18.200.000</span>
+                    <a href="contactos.html" class="btn-contacto">Consultar</a>
+                </div>
+            </article>
         </div>
+    </main>
 
-    </div>
+    <footer>
+        <p>&copy; 2026 Terrenos Chos Malal - Proyecto Final YPF</p>
+    </footer>
 
-    <div class="tarjeta">
+</body>
+</html>
 
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Terreno">
-
-        <div class="info">
-
-            <h2>Terreno Barrio Norte</h2>
-
-            <p>📍 Barrio Norte</p>
-
-            <p>📐 650 m²</p>
-
-            <h3>$30.000.000</h3>
-
-            <a href="#" class="boton">Ver más</a>
-
-        </div>
-
-    </div>
-
-</div>

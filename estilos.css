@@ -114,4 +114,90 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+/* --- DISEÑO DE LA PÁGINA DE TERRENOS --- */
+
+.container-terrenos {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.titulo-pagina {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #003366;
+}
+
+/* El Grid hace que los terrenos se pongan en columnas */
+.grid-terrenos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 30px; /* Espacio entre las tarjetas */
+}
+
+/* Estilo de cada tarjeta */
+.tarjeta {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px); /* Efecto de que "flota" cuando pasas el mouse */
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+.tarjeta-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.tarjeta-info h3 {
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.tarjeta-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.precio {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8b5a2b; /* Color tierra/bronce */
+    margin-bottom: 15px;
+}
+
+.btn-contacto {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE PARA TERRENOS: Si la pantalla es chica, se pone en 1 sola columna */
+@media (max-width: 900px) {
+    .grid-terrenos {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-terrenos {
+        grid-template-columns: 1fr; /* 1 columna en celulares */
+    }
+}
 
